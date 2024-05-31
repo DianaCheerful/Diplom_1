@@ -1,6 +1,5 @@
 package test;
 
-import constant.BunData;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -10,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 
 @RunWith(Parameterized.class)
-public class BunTest {
+public class BunTest extends BaseTest {
 
     private final String name;
     private final float price;
@@ -21,11 +20,11 @@ public class BunTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] getBun() {
+    public static Object[][] getBunFields() {
         return new Object[][]{
-                {BunData.BUN_1.getName(), BunData.BUN_1.getPrice()},
-                {BunData.BUN_2.getName(), BunData.BUN_2.getPrice()},
-                {BunData.BUN_3.getName(), BunData.BUN_3.getPrice()},
+                {getDataBase().availableBuns().get(0).getName(), getDataBase().availableBuns().get(0).getPrice()},
+                {getDataBase().availableBuns().get(1).getName(), getDataBase().availableBuns().get(1).getPrice()},
+                {getDataBase().availableBuns().get(2).getName(), getDataBase().availableBuns().get(2).getPrice()},
         };
     }
 
