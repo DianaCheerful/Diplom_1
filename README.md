@@ -1,6 +1,8 @@
-# qa_java
+## qa_java
 
-QA Java Project
+# Diplom_1
+
+QA Java Diploma Project
 
 ## Дипломный проект.
 
